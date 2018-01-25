@@ -28,4 +28,3 @@ phases:
       - printf '[{"name":"ujetsapi","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
-      - awsnetcore/bin/Debug/netcoreapp2.0/*
