@@ -8,7 +8,7 @@ phases:
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=471861426143.dkr.ecr.us-east-2.amazonaws.com/ujetsapi
-      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=latest
 
   build:
     commands:
