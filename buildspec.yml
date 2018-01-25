@@ -7,7 +7,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
-      - REPOSITORY_URI=471861426143.dkr.ecr.us-east-2.amazonaws.com/ujetsapi
+      - REPOSITORY_URI=471861426143.dkr.ecr.us-east-2.amazonaws.com/ujetsapi     
       - IMAGE_TAG=latest
 
   build:
