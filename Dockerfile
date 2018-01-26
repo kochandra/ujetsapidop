@@ -1,26 +1,18 @@
-#FROM microsoft/aspnetcore:2.0
-#ARG source
-#WORKDIR /app
-#EXPOSE 80
-#EXPOSE 3306
-#COPY ${source:-obj/Docker/publish} .
-#ENTRYPOINT ["dotnet", "ujetsapi.dll"]
+FROM microsoft/aspnetcore-build:2.0 AS build-env
+ARG source
+WORKDIR /app
 
- # Sample contents of Dockerfile
- # Stage 1
- FROM microsoft/aspnetcore-build AS builder
- WORKDIR /source
+# Copy csproj and restore as distinct layers
 
- # caches restore result by copying csproj file separately
- COPY *.csproj .
- RUN dotnet restore
+COPY *.csproj ./
+RUN dotnet restore
 
- # copies the rest of your code
- COPY . .
- RUN dotnet publish --output /app/ --configuration Release
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
 
- # Stage 2
- FROM microsoft/aspnetcore
- WORKDIR /app
- COPY --from=builder /app .
- ENTRYPOINT ["dotnet", "ujetsapi.dll"]
+# Build runtime image
+FROM microsoft/aspnetcore:2.0
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "ujetsapi.dll"]

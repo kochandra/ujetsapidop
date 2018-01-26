@@ -1,0 +1,12 @@
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\bin\Release\netcoreapp2.0\ujetsimageapi.deps.json
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\bin\Release\netcoreapp2.0\ujetsimageapi.runtimeconfig.json
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\bin\Release\netcoreapp2.0\ujetsimageapi.runtimeconfig.dev.json
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\bin\Release\netcoreapp2.0\ujetsimageapi.dll
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\bin\Release\netcoreapp2.0\ujetsimageapi.pdb
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.csproj.CoreCompileInputs.cache
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.AssemblyInfoInputs.cache
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.AssemblyInfo.cs
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.dll
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.pdb
+C:\Users\YamakasiPendragon\Downloads\Projects\ujetsimageapi-master\ujetsimageapi\obj\Release\netcoreapp2.0\ujetsimageapi.csprojResolveAssemblyReference.cache

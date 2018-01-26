@@ -3,18 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
-    <UserSecretsId>6cae83d3-9973-4b74-9073-d15e2e2614e2</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="aws-beanstalk-tools-defaults.json" />
-    <Content Remove="aws-ecs-tools-defaults.json" />
-    <Content Remove="imagedefinition.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="awsecrdockerpush.ps1" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
@@ -34,7 +23,6 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
   </ItemGroup>
 
 

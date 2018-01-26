@@ -2,8 +2,12 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/ujetsimageapi",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:55560/",
+      "applicationUrl": "http://localhost:53103/",
       "sslPort": 0
     }
   },
@@ -13,7 +17,13 @@
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "DB_Server": "XXXXXXX",
+        "AWS_SECRET_ACCESS_KEY": "XXXXXXX",
+        "DB_User": "XXXXXXX",
+        "AWS_ACCESS_KEY_ID": "XXXXXXX",
+        "DB_Database": "XXXXXXX",
+        "ASPNETCORE_ENVIRONMENT": "XXXXXXX",
+        "DB_Password": "XXXXXXX"
       }
     },
     "ujetsapi": {
@@ -21,9 +31,15 @@
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "DB_Server": "XXXXXXX",
+        "AWS_SECRET_ACCESS_KEY": "XXXXXXX",
+        "DB_User": "XXXXXXX",
+        "AWS_ACCESS_KEY_ID": "XXXXXXX",
+        "DB_Database": "XXXXXXX",
+        "ASPNETCORE_ENVIRONMENT": "XXXXXXX",
+        "DB_Password": "XXXXXXX"
       },
-      "applicationUrl": "http://localhost:55561/"
+      "applicationUrl": "http://localhost:53104/"
     }
   }
 }

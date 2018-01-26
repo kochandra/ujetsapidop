@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace ujetsapi
+namespace ujetsimageapi
 {
     public class Program
     {
@@ -19,7 +19,7 @@ namespace ujetsapi
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
+                .UseStartup<uimgapi.Startup>()
                 .Build();
     }
 }
