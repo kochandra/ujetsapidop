@@ -11,6 +11,8 @@ using Microsoft.Extensions.Options;
 using uimgapi.Models;
 using Amazon.S3;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Cors.Internal;
 
 namespace uimgapi
 {
@@ -43,10 +45,25 @@ namespace uimgapi
             services.AddDbContext<s3uploadtestContext>(options =>
             options.UseMySql(connectionString));
 
-            services.AddCors();
+            services.AddCors(o => o.AddPolicy("AllowPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             services.AddMvc();
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowPolicy"));
+            });
+
             //services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
             //services.AddAWSService<IAmazonS3>();
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.SwaggerDoc("v1", new Info { Title = "UJets Image API", Version = "v1" });
+            //});
 
         }
 
@@ -57,7 +74,14 @@ namespace uimgapi
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors( p=> p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+            //app.UseSwagger();
+
+            //// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            //});
             app.UseMvc();
         }
     }

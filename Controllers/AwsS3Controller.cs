@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using uimgapi.Models;
 using Amazon.S3;
+using Microsoft.AspNetCore.Cors;
 
 namespace uimgapi.Controllers
 {
     [Produces("application/json")]
     [Route("api/AwsS3")]
+    [EnableCors("AllowPolicy")]
     public class AwsS3Controller : Controller
     {
         private readonly s3uploadtestContext _context;
@@ -122,7 +124,7 @@ namespace uimgapi.Controllers
 
             if (awsS3 == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             string link = S3Items.uploadS3Object(imageData, unquieID);
             if (link != null)
