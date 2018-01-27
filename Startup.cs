@@ -45,18 +45,18 @@ namespace uimgapi
             services.AddDbContext<s3uploadtestContext>(options =>
             options.UseMySql(connectionString));
 
-            services.AddCors(o => o.AddPolicy("AllowPolicy", builder =>
-            {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
-            }));
+            //services.AddCors(o => o.AddPolicy("AllowPolicy", builder =>
+            //{
+            //    builder.AllowAnyOrigin()
+            //           .AllowAnyMethod()
+            //           .AllowAnyHeader();
+            //}));
 
             services.AddMvc();
-            services.Configure<MvcOptions>(options =>
-            {
-                options.Filters.Add(new CorsAuthorizationFilterFactory("AllowPolicy"));
-            });
+            //services.Configure<MvcOptions>(options =>
+            //{
+            //    options.Filters.Add(new CorsAuthorizationFilterFactory("AllowPolicy"));
+            //});
 
             //services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
             //services.AddAWSService<IAmazonS3>();

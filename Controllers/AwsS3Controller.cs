@@ -13,7 +13,6 @@ namespace uimgapi.Controllers
 {
     [Produces("application/json")]
     [Route("api/AwsS3")]
-    [EnableCors("AllowPolicy")]
     public class AwsS3Controller : Controller
     {
         private readonly s3uploadtestContext _context;
