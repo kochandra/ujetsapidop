@@ -116,9 +116,26 @@ namespace uimgapi.Controllers
 
             //Parse Data
             Newtonsoft.Json.Linq.JToken[] dataArray = ((Newtonsoft.Json.Linq.JContainer)data).ToArray();
-            string imageData = dataArray[0].First.ToString();
-            string unquieID = dataArray[1].First.ToString();
-            string name = dataArray[2].First.ToString();
+            string imageData = "";
+            string unquieID = "";
+            string name = "";
+
+            foreach (var item in dataArray)
+            {
+                if (item.Path.ToString().Equals("data"))
+                {
+                    imageData = item.First.ToString();
+                }
+                else if (item.Path.ToString().Equals("filename"))
+                {
+                    name = item.First.ToString();
+                }
+                else if (item.Path.ToString().Equals("id"))
+                {
+                    unquieID = item.First.ToString();
+                }
+
+            }
 
             var awsS3 = await _context.AwsS3.SingleOrDefaultAsync(m => m.UniqueCode == unquieID);
 

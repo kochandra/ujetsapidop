@@ -22,3 +22,15 @@ C:\Users\prave\source\repos\man\ujetsapi\obj\Debug\netcoreapp2.0\ujetsapi.Assemb
 C:\Users\prave\source\repos\man\ujetsapi\obj\Debug\netcoreapp2.0\ujetsapi.AssemblyInfo.cs
 C:\Users\prave\source\repos\man\ujetsapi\obj\Debug\netcoreapp2.0\ujetsapi.dll
 C:\Users\prave\source\repos\man\ujetsapi\obj\Debug\netcoreapp2.0\ujetsapi.pdb
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\bin\Debug\netcoreapp2.0\ujetsapi.deps.json
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\bin\Debug\netcoreapp2.0\ujetsapi.runtimeconfig.json
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\bin\Debug\netcoreapp2.0\ujetsapi.runtimeconfig.dev.json
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\bin\Debug\netcoreapp2.0\ujetsapi.dll
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\bin\Debug\netcoreapp2.0\ujetsapi.pdb
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.csprojResolveAssemblyReference.cache
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.csproj.CoreCompileInputs.cache
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.AssemblyInfoInputs.cache
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.AssemblyInfo.cs
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.dll
+C:\Users\YamakasiPendragon\Documents\Unisys Project\ujetsapidop\obj\Debug\netcoreapp2.0\ujetsapi.pdb
