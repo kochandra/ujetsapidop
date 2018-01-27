@@ -19,6 +19,7 @@ namespace uimgapi.Controllers
         private readonly s3uploadtestContext _context;
        // IAmazonS3 S3Client { get; set; }
         S3Objects S3Items;
+        private string[] mediaType = {"png","jpeg"};
         public AwsS3Controller(s3uploadtestContext context)
         {
             _context = context;
@@ -169,6 +170,21 @@ namespace uimgapi.Controllers
                 return NoContent();
             }   
             return BadRequest();
+        }
+
+        private string replaceDataImageString(string base64String)
+        {
+            string convert = base64String;
+            foreach (string item in mediaType)
+            {
+
+                if (convert.Contains(string.Format("data:image/{0};base64,", item)))
+                {
+                    convert = convert.Replace(string.Format("data:image/{0};base64,", item), String.Empty);
+                    break;
+                }
+            }
+            return convert;
         }
 
         // DELETE: api/AwsS3/5
