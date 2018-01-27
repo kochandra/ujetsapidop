@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Cors;
 namespace uimgapi.Controllers
 {
     [Produces("application/json")]
+    [EnableCors("AllowAll")]
     [Route("api/AwsS3")]
     public class AwsS3Controller : Controller
     {
