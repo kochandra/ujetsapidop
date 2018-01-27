@@ -51,7 +51,7 @@ namespace uimgapi
             //           .AllowAnyMethod()
             //           .AllowAnyHeader();
             //}));
-
+            services.AddCors();
             services.AddMvc();
             //services.Configure<MvcOptions>(options =>
             //{
@@ -82,6 +82,7 @@ namespace uimgapi
             //{
             //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             //});
+            app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }
