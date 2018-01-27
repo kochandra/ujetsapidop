@@ -45,18 +45,12 @@ namespace uimgapi
             services.AddDbContext<s3uploadtestContext>(options =>
             options.UseMySql(connectionString));
 
-            //services.AddCors(o => o.AddPolicy("AllowPolicy", builder =>
-            //{
-            //    builder.AllowAnyOrigin()
-            //           .AllowAnyMethod()
-            //           .AllowAnyHeader();
-            //}));
-            services.AddCors();
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()
+                                                       .AllowAnyMethod()
+                                                        .AllowAnyHeader()));
+
             services.AddMvc();
-            //services.Configure<MvcOptions>(options =>
-            //{
-            //    options.Filters.Add(new CorsAuthorizationFilterFactory("AllowPolicy"));
-            //});
+
 
             //services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
             //services.AddAWSService<IAmazonS3>();
@@ -82,7 +76,7 @@ namespace uimgapi
             //{
             //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             //});
-            app.UseCors(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors("AllowAll");
             app.UseMvc();
         }
     }
