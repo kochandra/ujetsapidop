@@ -149,8 +149,9 @@ namespace uimgapi.Controllers
             {
                 awsS3.UniqueCode = unquieID;
                 awsS3.Filename = name;
-                awsS3.UploadedDate = DateTime.Now.ToShortDateString();
+                awsS3.UploadedDate = DateTime.Now.ToString("G");
                 awsS3.ImageLink = link;
+                awsS3.ApprovalStatus = "Pending";
                 _context.Entry(awsS3).State = EntityState.Modified;
                 try
                 {
